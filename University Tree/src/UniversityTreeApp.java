@@ -101,7 +101,7 @@ public class UniversityTreeApp {
         // Подменю
         JMenu fontSizeMenu = new JMenu("Font Size");
 
-        // Размери
+        // Размери на шрифта
         JMenuItem fontSizeMenuItem1 = new JMenuItem("Tiny");
         JMenuItem fontSizeMenuItem2 = new JMenuItem("Small");
         JMenuItem fontSizeMenuItem3 = new JMenuItem("Medium");
@@ -124,14 +124,14 @@ public class UniversityTreeApp {
         menuBar.add(optionsMenu);
         frame.setJMenuBar(menuBar);
 
-        // Set up tree renderer
+        //Премахва фона на буквите / прави го прозрачен
         DefaultTreeCellRenderer renderer = new DefaultTreeCellRenderer();
         renderer.setBackgroundNonSelectionColor(new Color(0, 0, 0, 0));
         renderer.setBackgroundSelectionColor(new Color(0, 0, 0, 0));
         renderer.setTextSelectionColor(Color.cyan);
         renderer.setTextNonSelectionColor(Color.lightGray);
         tree.setCellRenderer(renderer);
-
+        //Създаване на обвивката/кутията на програмата
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
         panel.add(Box.createRigidArea(new Dimension(0, 0))); // Adjust the width as needed
